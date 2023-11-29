@@ -20,17 +20,28 @@
 <section id="main-content">
     <div class="card">
         <div class="card-left">
-            <h2>Titre du produit</h2>
-            <p>Description du produit</p>
-            <p class="price">Prix : 99,99€</p>
+            <h2 class="description-item">Tondeuse</h2>
+            <p class="description-item">Description du produit</p>
+            <p class="description-item">Prix : 99,99€</p>
             <button>Acheter</button>
         </div>
-        <div class="card-right">
+        <div class="item" onmouseover="afficherDescription(this)" onmouseout="cacherDescription(this)">
             <img src="assets/img/item1.png">
         </div>
     </div>
 </section>
 {{end}}
+<script>
+    function afficherDescription(element) {
+        var description = element.querySelector('.description-item');
+        description.style.display = 'block';
+    }
+
+    function cacherDescription(element) {
+        var description = element.querySelector('.description-item');
+        description.style.display = 'none';
+    }
+</script>
 <br>    
 <br>
 <br>
