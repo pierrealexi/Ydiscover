@@ -7,17 +7,30 @@ body {
     background-size: 50%;
 }
 
+.verticale-nav {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    width: 150px;
+    background-color:rgb(14, 6, 6)
+}
+
 .card {
+    transform: translate(200px, 0px);
     display: flex;
     width: fit-content;
+    height: 500px;
     flex-direction: row;
     border: 3px solid #292424;
     border-radius: 14px;
     background-color: rgb(105, 233, 105);
+    -webkit-box-shadow: 24px 17px 14px 11px #000000; 
+    box-shadow: 24px 17px 14px 11px #000000;
 }
 
 h2, p {
-    font-size: 1.5em; /* Ajustez la taille de police selon vos préférences */
+    font-size: 1.5em;
     color: #292424;
 }
 
@@ -47,4 +60,29 @@ h2, p {
 img {
     max-width: 100%;
     height: 100%;
+}
+
+.nom-item {
+    display: flex;
+    align-items: top;
+    justify-content: top;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    color: #000000;
+}
+
+.description-item {
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    color: #000000;
+}
+
+.prix-item {
+    font-size: 17px;
 }
