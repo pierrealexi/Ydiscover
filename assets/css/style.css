@@ -8,18 +8,26 @@ body {
 }
 
 .verticale-nav {
-    position:fixed;
+    position: fixed;
     top:0;
     bottom:0;
     left:0;
-    width: 150px;
+    width: 175px;
     background-color:rgb(14, 6, 6)
 }
 
+.cards{
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
 .card {
-    transform: translate(200px, 0px);
+    margin: 50px;
+    justify-content: end;
     display: flex;
-    width: fit-content;
+    width:fit-content;
+    max-width: 1000px;
     height: 500px;
     flex-direction: row;
     border: 3px solid #292424;
@@ -35,15 +43,23 @@ h2, p {
 }
 
 .card-left {
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 10%;
+    max-width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    display: none;
 }
 
 .card:hover > .card-left {
     display: flex;
+    max-width: 400px;
+}
+
+.card:hover {
+    width: 2500px;
 }
 
 .card-left h2, .card-left p, .card-left .price, .card-left button {
@@ -58,8 +74,8 @@ h2, p {
 }
 
 img {
-    max-width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
 }
 
 .nom-item {
@@ -85,4 +101,14 @@ img {
 
 .prix-item {
     font-size: 17px;
+}
+
+button {
+    background-color: rgb(4, 44, 12);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
 }
