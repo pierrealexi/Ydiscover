@@ -61,3 +61,29 @@ button:hover {
     background: #fff;
     color: var(--secondary-color);
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 10px;
+}
+
+form input {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    margin: 10px 0;
+}
