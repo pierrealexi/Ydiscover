@@ -17,7 +17,6 @@ def queryLogin(username, password):
 def queryRegister(data):
     con = sqlite3.connect("database.db")
     cur = con.cursor()
-    data = (data[0], data[1], data[2], data[3])
     cur.execute(f"INSERT INTO Users (nom,prenom,email,motdepasse) VALUES (?,?,?,?)", data)
     con.commit()
     cur.close()
